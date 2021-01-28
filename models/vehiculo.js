@@ -1,7 +1,7 @@
 const { Schema, model } = require ('mongoose');
 
 const rentcarSchema = new Schema({
-    size: {
+    carType: {
         type: Array,
         required: true
     },
@@ -36,7 +36,7 @@ const rentcarSchema = new Schema({
         required: true
     },
 
-    airConditioning: {
+    airConditioner: {
         type: Boolean,
         required: true
     },
