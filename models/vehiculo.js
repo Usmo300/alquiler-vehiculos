@@ -1,4 +1,4 @@
-// const { Schema, model } = require ('mongoose');
+const { Schema, model } = require ('mongoose');
 
 const rentcarSchema = new Schema({
     size: {
@@ -53,4 +53,4 @@ const rentcarSchema = new Schema({
 });
 
 
-// module.exports = model('RentCar', rentcarSchema, 'rentcars');
+module.exports = model('RentCar', rentcarSchema, 'rentcars');
