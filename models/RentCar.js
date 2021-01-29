@@ -50,6 +50,11 @@ const rentcarSchema = new Schema({
         type: String,
         required: true
     },
+
+    transactionType:{
+        type: String,
+        required: true
+    },
 });
 
 
