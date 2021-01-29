@@ -1,6 +1,11 @@
 const { Schema, model } = require ('mongoose');
 
 const rentcarSchema = new Schema({
+    transactionType:{
+        type: String,
+        required: true
+    },
+    
     size: {
         type: String,
         required: true
