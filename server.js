@@ -17,8 +17,6 @@ app.engine('hbs', exphbs({
     extname: '.hbs'
 }));
 
-app.get("/", (req, res) => {
-    res.render('/cars/newCarForm', {layout: "main"});
-  });
+
 
 module.exports = app;
