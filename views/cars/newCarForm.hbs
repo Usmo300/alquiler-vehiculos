@@ -1,1 +1,96 @@
-<p>Hello World</p>
+<form action="" method="POST" id="formRent">
+        
+        <h2>Coche nuevo para alquiler</h2>
+
+        <p>Finalidad del coche: <select name="transactionType" id="transactionTypeRent">
+            <option value="Compra">Compra</option>
+            <option value="Venta">Venta</option>
+            <option value="Alquiler" required>Alquiler</option>
+        </select></p>
+
+        <section id="transactionTypeRent">
+            <label for="transactionType"></label>
+            <p>Finalidad del coche: <input list="transactionTypeList" type="text" id="transactionType" name="transaction" placeholder="Finalidad" required /></p>
+            <datalist id="transactionTypeList">
+                <option label="Compra" value="Compra"></option>
+                <option label="Venta" value="Venta"></option>
+                <option label="Alquiler" value="Alquiler"></option>
+            </datalist>
+        </section>
+
+        <section id="carSizeRent">
+            <p>Tamaño del coche: <input type="radio" id="smallCar" name="carSize" value="smallCar" checked>
+            <label for="smallCar">Pequeño</label>
+            <input type="radio" id="mediumCar" name="carSize" value="mediumCar">
+            <label for="mediumCar">Mediano</label>
+            <input type="radio" id="bigCar" name="carSize" value="bigCar">
+            <label for="bigCar">Grande</label></p>
+        </section>
+
+        <section id="carBrandRent">
+            <label for="carBrand"></label>
+            <p>Marca del coche: <input type="text" id="carBrand" name="brand" placeholder="Marca del coche" required></p>
+        </section>
+
+        <section id="carModelRent">
+            <label for="carModel"></label>
+            <p>Modelo: <input type="text" id="carModel" name="model" placeholder="Modelo del coche" required></p>
+        </section>
+
+        <section id="motorTypeRent">
+            <label for="motorType"></label>
+            <p>Tipo de combustible <input list="motorTypeList" type="text" id="motorType" name="motor" placeholder="Tipo de combustible" required/> </p>
+            <datalist id="motorTypeList">
+                <option label="Diesel" value="Diesel"></option>
+                <option label="Gasolina" value="Gasolina"></option>
+                <option label="Híbrido" value="Híbrido"></option>
+                <option label="Eléctrico" value="Eléctrico"></option>
+            </datalist>
+        </section>
+
+        <section id="transmissionTypeRent">
+            <p>Tipo de cambio: <input type="radio" id="manualCar" name="transmissionType" value="manualCar" checked>
+            <label for="manualCar">Manual</label>
+            <input type="radio" id="automaticCar" name="transmissionType" value="automaticCar">
+            <label for="automaticCar">Automático</label></p>
+        </section>
+
+        <section id="numberOfSeatsRent">
+            <label for="numberOfSeats"></label>
+            <p>Número de plazas: <input list="numberOfSeatsList" type="number" id="numberOfSeats" name="seats" placeholder="Número de asientos" required /></p>
+            <datalist id="numberOfSeatsList">
+                <option label="2" value="2"></option>
+                <option label="4" value="4"></option>
+                <option label="5" value="5"></option>
+                <option label="7" value="7"></option>
+                <option label="8" value="8"></option>
+                <option label="9" value="9"></option>
+            </datalist>
+        </section>
+
+        <section id="trunkSizeRent">
+            <label for="trunkSize"></label>
+            <p>Capacidad del maletero: <input type="text" id="trunkSize" name="trunkSize" placeholder="Tamaño del maletero" pattern="[0-9]+"> litros</p>
+        </section>
+
+        <section id="airConditioningRent">
+            <p>Aire acondicionado: <input type="radio" id="airConditioningYes" name="airConditioning" value="airConditioningYes" checked>
+            <label for="airConditioningYes">Sí</label>
+            <input type="radio" id="airConditioningNo" name="airConditioning" value="airConditioningNo">
+            <label for="airConditioningNo">No</label></p>
+        </section>
+
+        <section id="co2EmissionsRent">
+            <label for="co2Emissions"></label>
+            <p>Emisiones de CO2: <input type="text" id="co2Emissions" name="co2Emissions" placeholder="Emisiones" pattern="[0-9]+" required> gr/km</p>
+        </section>
+
+        <section id="carImageRent">
+            <label for="carImage"></label>
+            <p>Imagen del coche: <input type="file" id="carImage" name="carImage" required></p>
+        </section>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Reset</button>
+
+    </form>
