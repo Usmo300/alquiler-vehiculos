@@ -3,6 +3,10 @@ const exphbs = require('express-handlebars');
 const app = express();
 
 app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
+app.use(require('./routes/rentCar.route'));
 
 app.set('view engine', 'hbs');
 
@@ -12,12 +16,5 @@ app.engine('hbs', exphbs({
     partialsDir: __dirname + '/views/partials/',
     extname: '.hbs'
 }));
-
-
-
-
-
-
-
 
 module.exports = app;

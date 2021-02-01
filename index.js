@@ -1,5 +1,6 @@
+'use strict';
 
-const port = 6000;
+const port = 6969;
 const app = require('./server');
 require('./conexion');
 
