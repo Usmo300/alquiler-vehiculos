@@ -9,8 +9,8 @@ rentCarController.formCreateCar = (req,res)=>{
 }
 
 rentCarController.createNewCar = async(req, res) =>{
-    const {size, carBrand, carModel, motorType, TransmissionType, numberOfseats, trunkSize, airConditioning, co2Emissions, carImage} = req.body;
-    const newCar = new RentCar ({size, carBrand, carModel, motorType, TransmissionType, numberOfseats, trunkSize, airConditioning, co2Emissions, carImage});
+    const {transactionType, carSize, carBrand, carModel, motorType, transmissionType, numberOfSeats, trunkSize, airConditioning, co2Emissions, carImage} = req.body;
+    const newCar = new RentCar ({transactionType, carSize, carBrand, carModel, motorType, transmissionType, numberOfSeats, trunkSize, airConditioning, co2Emissions, carImage});
     await newCar.save();
     res.send('coche creado');
 };
