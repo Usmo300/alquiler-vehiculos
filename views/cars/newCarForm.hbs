@@ -2,21 +2,15 @@
         
         <h2>Coche nuevo para alquiler</h2>
 
-        <p>Finalidad del coche: <select name="transactionType" id="transactionTypeRent">
-            <option value="Compra">Compra</option>
-            <option value="Venta">Venta</option>
-            <option value="Alquiler" required>Alquiler</option>
-        </select></p>
-
-        <section id="transactionTypeRent">
-            <label for="transactionType"></label>
-            <p>Finalidad del coche: <input list="transactionTypeList" type="text" id="transactionType" name="transaction" placeholder="Finalidad" required /></p>
-            <datalist id="transactionTypeList">
-                <option label="Compra" value="Compra"></option>
-                <option label="Venta" value="Venta"></option>
-                <option label="Alquiler" value="Alquiler"></option>
-            </datalist>
-        </section>
+        <td>Finalidad del coche: </td>
+        <td>
+            <select name="transactionType" id="transactionTypeRent" required>
+                <option value="" selected disabled>Elige la finalidad</option>
+                <option value="Alquiler">Alquiler</option> 
+                <option value="Compra">Compra</option>
+                <option value="Venta">Venta</option>  
+            </select>
+        </td>
 
         <section id="carSizeRent">
             <p>Tamaño del coche: <input type="radio" id="smallCar" name="carSize" value="smallCar" checked>
@@ -37,16 +31,16 @@
             <p>Modelo: <input type="text" id="carModel" name="model" placeholder="Modelo del coche" required></p>
         </section>
 
-        <section id="motorTypeRent">
-            <label for="motorType"></label>
-            <p>Tipo de combustible <input list="motorTypeList" type="text" id="motorType" name="motor" placeholder="Tipo de combustible" required/> </p>
-            <datalist id="motorTypeList">
-                <option label="Diesel" value="Diesel"></option>
-                <option label="Gasolina" value="Gasolina"></option>
-                <option label="Híbrido" value="Híbrido"></option>
-                <option label="Eléctrico" value="Eléctrico"></option>
-            </datalist>
-        </section>
+        <td>Tipo de combustible: </td>
+        <td>
+            <select name="motorType" id="motorTypeRent" required>
+                <option value="" selected disabled>Elige el combustible</option>
+                <option value="Diesel">Diesel</option> 
+                <option value="Gasolina">Gasolina</option>
+                <option value="Híbrido">Híbrido</option>  
+                <option value="Eléctrico">Eléctrico</option>  
+            </select>
+        </td>
 
         <section id="transmissionTypeRent">
             <p>Tipo de cambio: <input type="radio" id="manualCar" name="transmissionType" value="manualCar" checked>
