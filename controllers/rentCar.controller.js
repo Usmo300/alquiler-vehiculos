@@ -15,6 +15,10 @@ rentCarController.createNewCar = async(req, res) =>{
     res.send('coche creado');
 };
 
+rentCarController.deleteCar = async (req,res) => {
+    await RentCar.findByIdAndDelete(req.params.id)
+    res.send('Coche elminado')
+}
 
 
 

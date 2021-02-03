@@ -9,6 +9,6 @@ router.get("/rentalCars/add", rentCarController.formCreateCar);
 
 router.post("/rentalCars/createCar", rentCarController.createNewCar);
 
-
+router.get('/rentalCars/deleteCar/:id',rentCarController.deleteCar);
 
 module.exports = router;
