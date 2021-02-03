@@ -22,7 +22,7 @@ rentCarController.showAllCars = async(req, res) =>{
 };
 
 rentCarController.showOneCar = async(req, res) =>{
-    const carDetail = await RentCar.findById(req.params.id);
+    const carDetail = await RentCar.findById(req.params.id).lean();
     res.render('cars/carDetailTemplate', {carDetail});
 
 };
