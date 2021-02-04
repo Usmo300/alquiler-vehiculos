@@ -1,6 +1,5 @@
 'use strict'
 
-const { find } = require('../models/RentCar');
 const RentCar = require('../models/RentCar');
 
 const rentCarController = {};
@@ -10,6 +9,7 @@ rentCarController.formCreateCar = (req,res)=>{
 }
 
 rentCarController.createNewCar = async(req, res) =>{
+    console.log(req.body);
     const {transactionType, carSize, carBrand, carModel, motorType, transmissionType, numberOfSeats, trunkSize, airConditioning, co2Emissions, carImage} = req.body;
     const newCar = new RentCar ({transactionType, carSize, carBrand, carModel, motorType, transmissionType, numberOfSeats, trunkSize, airConditioning, co2Emissions, carImage});
     await newCar.save();
@@ -22,7 +22,7 @@ rentCarController.showAllCars = async(req, res) =>{
 };
 rentCarController.deleteCar = async (req,res) => {
     console.log(req.params.id);
-    await RentCar.findByIdAndDelete(req.params.id).lean();
+    await RentCar.findByIdAndDelete(req.params.id);
     res.send('Coche elminado');
 };
 

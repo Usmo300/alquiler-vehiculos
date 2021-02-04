@@ -10,8 +10,13 @@ router.get("/rentalCars/add", rentCarController.formCreateCar);
 router.post("/rentalCars/createCar", rentCarController.createNewCar);
 
 router.get("/rentalCars/all", rentCarController.showAllCars);
-router.delete('/rentalCars/deleteCar/:id',rentCarController.deleteCar);
+
 
 router.get("/rentalCars/:id", rentCarController.showOneCar);
+
+
+router.get('/rentalCars/deleteCar/:id',rentCarController.deleteCar);
+
+
 
 module.exports = router;
