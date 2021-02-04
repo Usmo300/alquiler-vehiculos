@@ -21,9 +21,9 @@ rentCarController.showAllCars = async(req, res) =>{
     res.render('cars/allCars', {listOfCars});
 };
 rentCarController.deleteCar = async (req,res) => {
-    await RentCar.findByIdAndDelete(req.params.id)
-    res.send('Coche elminado')
-}
+    await RentCar.findByIdAndDelete(req.params.id);
+    res.send('Coche elminado');
+};
 
 rentCarController.showOneCar = async(req, res) =>{
     const carDetail = await RentCar.findById(req.params.id).lean();
