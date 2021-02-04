@@ -21,7 +21,8 @@ rentCarController.showAllCars = async(req, res) =>{
     res.render('cars/allCars', {listOfCars});
 };
 rentCarController.deleteCar = async (req,res) => {
-    await RentCar.findByIdAndDelete(req.params.id);
+    console.log(req.params.id);
+    await RentCar.findByIdAndDelete(req.params.id).lean();
     res.send('Coche elminado');
 };
 
