@@ -21,4 +21,10 @@ userController.showAllUsers = async(req, res) => {
     res.render('', {listOfUsers}); //rellenar la direccion donde se ven todos los usuarios. NO OLVIDARSE
 };
 
+userController.deleteUser = async (req, res) => {
+    console.log(req.params.id);
+    await user.findByIdAndDelete(req.params.id);
+    res.send('Usuario eliminado');
+};
+
 module.exports = userController;
