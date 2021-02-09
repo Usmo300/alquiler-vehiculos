@@ -16,4 +16,9 @@ userController.createNewUser = async(req, res) =>{
     res.sen('Usuario creado');
 };
 
+userController.showAllUsers = async(req, res) => {
+    const listOfUsers = await user.find({}).leon();
+    res.render('', {listOfUsers}); //rellenar la direccion donde se ven todos los usuarios. NO OLVIDARSE
+};
+
 module.exports = userController;

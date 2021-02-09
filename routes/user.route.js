@@ -8,4 +8,6 @@ router.get("/users/add", userController.formCreateUser);
 
 router.post("/user/createUser", userController.createNewUser);
 
+router.get("/user/all", userController.showAllUsers);
+
 module.exports = router;
