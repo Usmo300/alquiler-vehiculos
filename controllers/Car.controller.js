@@ -1,6 +1,6 @@
 'use strict'
 
-const RentCar = require('../models/RentCar');
+const RentCar = require('../models/Car');
 
 const rentCarController = {};
 
