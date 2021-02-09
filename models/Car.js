@@ -4,13 +4,13 @@ const carSchema = new Schema({
     carBrand: {type: String,
         required:true},
     
-    carModel: {type: String,
-            required:true},
+    carModel: {type: String,},
+        //     required:true},
     
-    modelYear: {type: String,
-            required:true},
+    modelYear: {type: String,},
+        //     required:true},
     
-    nextItvDate: String,
+    nextItvDate: String, 
     
     sellingPrice: Number,
     
@@ -23,17 +23,17 @@ const carSchema = new Schema({
     leaseReturnDate: Date, 
     
     carImage: {
-            type: String,
-            required:true
-    },
-    carColor: {type: String,
-            required:true},
+            type: String,},
+        //     required:true},
+        
+    carColor: {type: String,},
+        //     required:true},
     
-    seatsNumber: {type: Number,
-            required:true},
+    seatsNumber: {type: Number,},
+        //     required:true},
     
-    doorNumber: {type: Number,
-            required:true},
+    doorNumber: {type: Number,},
+        //     required:true},
     
     trunkSize: Number,
     
@@ -43,17 +43,16 @@ const carSchema = new Schema({
     
     airConditioner: String,
     
-    transmissionType: {type: String,
-            required:true},
+    transmissionType: {type: String,},
+        //     required:true},
     
-    motorType: {type: String,
-            required:true},
+    motorType: {type: String,},
+        //     required:true},
     
     stock: Number,
     
     availability: String
 
 });
-
 
 module.exports = model('Car', carSchema, 'cars');

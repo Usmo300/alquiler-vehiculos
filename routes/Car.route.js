@@ -11,12 +11,11 @@ router.post("/rentalCars/createCar", rentCarController.createNewCar);
 
 router.get("/rentalCars/all", rentCarController.showAllCars);
 
+router.get("/rentalCars/deleteCar/:id",rentCarController.deleteCar);
+
+router.get("/rentalCars/updateCar/:id",rentCarController.updateCar);
 
 router.get("/rentalCars/:id", rentCarController.showOneCar);
-
-
-router.get('/rentalCars/deleteCar/:id',rentCarController.deleteCar);
-
 
 
 module.exports = router;

@@ -10,8 +10,8 @@ rentCarController.formCreateCar = (req,res)=>{
 
 rentCarController.createNewCar = async(req, res) =>{
     console.log(req.body);
-    const {transactionType, carSize, carBrand, carModel, motorType, transmissionType, numberOfSeats, trunkSize, airConditioning, co2Emissions, carImage} = req.body;
-    const newCar = new RentCar ({transactionType, carSize, carBrand, carModel, motorType, transmissionType, numberOfSeats, trunkSize, airConditioning, co2Emissions, carImage});
+    const {carBrand, carModel, modelYear, nextItvDate, sellingPrice, costPrice, leasingPrice, leaseDate, leaseReturnDate, carImage, carColor, seatsNumber, trunkSize, co2Emissions, carType, airConditioner, transmisionType, motorType, stock, availability} = req.body;
+    const newCar = new RentCar({carBrand, carModel, modelYear, nextItvDate, sellingPrice, costPrice, leasingPrice, leaseDate, leaseReturnDate, carImage, carColor, seatsNumber, trunkSize, co2Emissions, carType, airConditioner, transmisionType, motorType, stock, availability});
     await newCar.save();
     res.send('coche creado');
 };
@@ -25,6 +25,11 @@ rentCarController.deleteCar = async (req,res) => {
     await RentCar.findByIdAndDelete(req.params.id);
     res.send('Coche elminado');
 };
+
+rentCarController.updateCar = async(req, res) => {
+    await RentCar.findByIdAndUpdate(req.params.id, req.body);
+    res.send('Coche editado');
+}
 
 rentCarController.showOneCar = async(req, res) =>{
     const carDetail = await RentCar.findById(req.params.id).lean();
