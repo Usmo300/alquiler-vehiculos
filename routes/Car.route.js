@@ -9,7 +9,7 @@ router.get("/rentalCars/add", CarController.formCreateCar);
 
 router.post("/rentalCars/createCar", CarController.createNewCar);
 
-router.get("/rentalCars/:id", CarController.showOneCar);
+router.get("/rentalCars/detail/:id", CarController.showOneCar);
 router.get("/rentalCars/all", CarController.showAllCars);
 
 
