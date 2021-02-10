@@ -5,7 +5,7 @@ const user = require ('../models/user');
 const userController = {};
 
 userController.formCreateUser = (req, res) =>{
-    res.render('') //rellenar con la dirección del formulario,no olvidarse.
+    res.render('users/newUserForm');
 }
 
 userController.createNewUser = async(req, res) =>{
@@ -18,13 +18,13 @@ userController.createNewUser = async(req, res) =>{
 
 userController.showAllUsers = async(req, res) => {
     const listOfUsers = await user.find({}).leon();
-    res.render('', {listOfUsers}); //rellenar la direccion donde se ven todos los usuarios. NO OLVIDARSE
+    res.render('users/allUsers', {listOfUsers}); 
 };
 
 userController.deleteUser = async (req, res) => {
     console.log(req.params.id);
     await user.findByIdAndDelete(req.params.id);
-    res.send('Usuario eliminado');
+    res.redirect('users/allUsers');
 };
 
 userController.showOneUser = async (req, res) => {
@@ -34,7 +34,7 @@ userController.showOneUser = async (req, res) => {
 
 userController.updateUser = async (req, res) => {
     await user.findByIdAndUpdate(req.params.id, req.body);
-    res.redirect('');
+    res.redirect('users/allUsers');
 };
 
 module.exports = userController;
