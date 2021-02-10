@@ -32,4 +32,9 @@ userController.showOneUser = async (req, res) => {
     res.render('users/userDetailTemplate', {userDetail});
 };
 
+userController.updateUser = async (req, res) => {
+    await user.findByIdAndUpdate(req.params.id, req.body);
+    res.redirect('');
+};
+
 module.exports = userController;
