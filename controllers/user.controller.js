@@ -27,4 +27,9 @@ userController.deleteUser = async (req, res) => {
     res.send('Usuario eliminado');
 };
 
+userController.showOneUser = async (req, res) => {
+    const userDetail = await user.findById(req.params.id).lean();
+    res.render('users/userDetailTemplate', {userDetail});
+};
+
 module.exports = userController;
