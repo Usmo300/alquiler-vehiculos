@@ -1,0 +1,30 @@
+<form action="/rentalCars/createSearcher" method="POST" id="formRent">
+        
+        <h2>Búsqueda por fechas</h2>
+
+        <section id="">
+            <label for="leaseDate">Fecha de recogida: </label>
+            <input type="date" id="leaseDate" name="leaseDate" placeholder="Fecha recogida"/>
+        </section>
+
+        <section id="">
+            <label for="leaseTime">Hora de recogida: </label>
+            <input type="time" id="leaseTime" name="leaseTime" placeholder="Hora recogida"/>
+        </section>
+
+        <section id="">
+            <label for="leaseReturnDate">Fecha de devolución: </label>
+            <input type="date" id="leaseReturnDate" name="leaseReturnDate" placeholder="Fecha devolución"/>
+        </section>
+
+        <section id="nextItvDate">
+            <label for="leaseTimeEnd">Hora devolución: </label>
+            <input type="time" id="leaseTimeEnd" name="leaseTimeEnd" placeholder="Hora devolución"/>
+        </section>
+
+        
+      
+        <button type="submit">Enviar</button>
+        <button type="reset">Reset</button>
+
+    </form>
