@@ -2,21 +2,21 @@
 
 const { Router } = require ('express');
 const router = Router();
-const rentCarController = require('../controllers/Car.controller');
+const CarController = require('../controllers/carController');
 
 
-router.get("/rentalCars/add", rentCarController.formCreateCar);
+router.get("/rentalCars/add", CarController.formCreateCar);
 
-router.post("/rentalCars/createCar", rentCarController.createNewCar);
+router.post("/rentalCars/createCar", CarController.createNewCar);
 
-router.get("/rentalCars/all", rentCarController.showAllCars);
-
-
-router.get("/rentalCars/:id", rentCarController.showOneCar);
+router.get("/rentalCars/detail/:id", CarController.showOneCar);
+router.get("/rentalCars/all", CarController.showAllCars);
 
 
-router.get('/rentalCars/deleteCar/:id',rentCarController.deleteCar);
+router.get("/rentalCars/updateCar/:id", CarController.formEditCar)
+router.post("/rentalCars/updateCar/:id",CarController.updateCar);
 
+router.get("/rentalCars/deleteCar/:id",CarController.deleteCar);
 
 
 module.exports = router;

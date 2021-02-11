@@ -2,10 +2,10 @@
     
         {{#each listOfCars}}
             <ul>
-                <a href="/rentalCars/{{_id}}">
+                <a href="/rentalCars/detail/{{_id}}">
                     <li>Marca: {{carBrand}}</li>
                     <li>Modelo: {{carModel}}</li>
-                    <li>Tamaño: {{carSize}}</li>
+                    <li>Tamaño: {{carType}}</li>
                 </a>
             </ul>
         {{/each}}

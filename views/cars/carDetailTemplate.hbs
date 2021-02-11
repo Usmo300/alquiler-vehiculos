@@ -1,42 +1,86 @@
-    <section>
-        <label for="transactionType">Finalidad: {{carDetail.transactionType}} </label>
-    </section>
-    <br>
-    <section>
-        <label for="carSize">Tamaño: {{carDetail.carSize}} </label>
-    </section>
-    <br>
-    <section>
-        <label for="carBrand">Marca: {{carDetail.carBrand}} </label>
-    </section>
-    <br>
-    <section>
-        <label for="carModel">Modelo: {{carDetail.carModel}} </label>
-    </section>
-    <br>
-    <section>
-        <label for="motorType">Combustible: {{carDetail.motorType}} </label>
-    </section>
-    <br>
-    <section>
-        <label for="transmissionType">Tipo de cambio: {{carDetail.transmissionType}} </label>
-    </section>
-    <br>
-    <section>
-        <label for="numberOfSeats">Número de plazas: {{carDetail.numberOfSeats}} </label>
-    </section>
-    <br>
-    <section>
-        <label for="trunkSize">Tamaño del maletero: {{carDetail.trunkSize}} </label>
-    </section>
-    <br>
-    <section>
-        <label for="airConditioning">Aire acondicionado: {{carDetail.airConditioning}} </label>
-    </section>
-    <br>
-    <section>
-        <label for="co2Emissions">Emisiones de CO2: {{carDetail.co2Emissions}} g/km</label>
-    </section>
-    <br>
+<section>
+    <label for="carBrand">Marca:{{carDetail.carBrand}} </label>
+</section>
+<br>
+<section>
+    <label for="carModel">Modelo del coche:{{carDetail.carModel}} </label>
+</section>
+<br>
+<section>
+    <label for="modelYear">Año del vehículo:{{carDetail.modelYear}} </label>
+</section>
+<br>
+<section>
+    <label for="nextItvDate">Próxima ITV:{{carDetail.nextItvDate}} </label>
+</section>
+<br>
+<section>
+    <label for="sellingPrice">Precio de venta:{{carDetail.sellingPrice}} </label>
+</section>
+<br>
+<section>
+    <label for="costPrice">Precio de coste del producto:{{carDetail.costPrice}} </label>
+</section>
+<br>
+<section>
+    <label for="leasingPrice">Precio alquiler:{{carDetail.leasingPrice}} </label>
+</section>
+<br>
+<section>
+    <label for="leaseDate">Fecha de alquiler:{{carDetail.leaseDate}} </label>
+</section>
+<br>
+<section>
+    <label for="leaseReturnDate">Fecha devolución:{{carDetail.leaseReturnDate}} </label>
+</section>
+
+<section>
+    <label for="carImage">Imagen:{{carDetail.carImage}} </label>
+</section>
+<br>
+<section>
+    <label for="carColor">Color del coche:{{carDetail.carColor}} </label>
+</section>
+
+<section>
+    <label for="seatsNumber">Número de asientos:{{carDetail.seatsNumber}} </label>
+</section>
+<br>
+<section>
+    <label for="doorNumber">Número de puertas:{{carDetail.doorNumber}} </label>
+</section>
+<br>
+<section>
+    <label for="trunkSize">Tamaño maletero:{{carDetail.trunkSize}} </label>
+</section>
+<br>
+<section>
+    <label for="co2Emissions">co2 Emisiones:{{carDetail.co2Emissions}} </label>
+</section>
+<br>
+<section>
+    <label for="carType">Tipo de coche:{{carDetail.carType}} </label>
+</section>
+<br>
+<section>
+    <label for="airConditioner">Aire acondicionado:{{carDetail.airConditioner}} </label>
+</section>
+<br>
+<section>
+    <label for="transmissionType">Tipo de transmisión:{{carDetail.transmissionType}} </label>
+</section>
+<br>
+<section>
+    <label for="motorType">Tipo de motor:{{carDetail.motorType}} </label>
+</section>
+<br>
+<section>
+    <label for="stock">Stock:{{carDetail.stock}} </label>
+</section>
+<br>
+<section>
+    <label for="availability">Disponibibilidad:{{carDetail.availability}} </label>
+</section>
 
 <a href="/rentalCars/deleteCar/{{carDetail._id}}">Borrar</a>
+<a href="/rentalCars/updateCar/{{carDetail._id}}">Editar</a>
