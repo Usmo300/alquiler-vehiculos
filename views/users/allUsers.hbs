@@ -2,10 +2,11 @@
 
     {{#each listOfUsers}}
         <ul>
-            <a href="/users/detail/{{_id}}"></a>
+            <a href="/users/detail/{{_id}}">
                 <li>Nombre: {{name}}</li>
                 <li>Apellidos: {{surname}}</li>
                 <li>Nombre de usuario: {{userName}}</li>
+            </a>
         </ul>
     {{/each}}
 

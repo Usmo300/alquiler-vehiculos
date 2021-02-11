@@ -13,8 +13,8 @@
     </section>
 
     <section>
-        <label for="dniNumer">DNI: </label>
-        <input type="number" id="dniNumer" name="dniNumer" value="{{userDetail.dniNumber}}">
+        <label for="dniNumber">DNI: </label>
+        <input type="number" id="dniNumber" name="dniNumber" value="{{userDetail.dniNumber}}">
     </section>
 
     <section>
@@ -47,10 +47,10 @@
         <input type="date" id="membershipExpirationDate" name="membershipExpirationDate" value="{{userDetail.membershipExpirationDate}}">
     </section>
 
-    <section>
+    {{!-- <section>
         <label for="leasedCars">Coches alquilados: </label>
         <input type="text" id="leasedCars" name="leasedCars" value="{{userDetail.leasedCars}}">
-    </section>
+    </section> --}}
 
     <button type="submit">Enviar</button>
     <button type="reset">Reset</button>

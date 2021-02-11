@@ -7,7 +7,7 @@
 </section>
 <br>
 <section>
-    <label for="dniNumer">DNI:{{userDetail.dniNumer}} </label>
+    <label for="dniNumber">DNI:{{userDetail.dniNumber}} </label>
 </section>
 <br>
 <section>
@@ -34,10 +34,10 @@
     <label for="membershipExpirationDate">Fecha fin de usuario:{{userDetail.membershipExpirationDate}} </label>
 </section>
 
-<section>
+{{!-- <section>
     <label for="leasedCars">Coches alquilados:{{userDetail.leasedCars}} </label>
 </section>
-<br>
+<br> --}}
 
 <a href="/users/deleteUser/{{userDetail._id}}">Borrar</a>
 <a href="/users/updateUser/{{userDetail._id}}">Editar</a>
