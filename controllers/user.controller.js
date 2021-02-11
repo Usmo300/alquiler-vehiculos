@@ -36,13 +36,12 @@ userController.formEditUser = async (req,res) => {
 
 userController.updateUser = async (req, res) => {
     await user.findByIdAndUpdate(req.params.id, req.body);
-    res.redirect('users/allUsers');
+    res.redirect('/users/allUsers');
 };
 
 userController.deleteUser = async (req, res) => {
-    console.log(req.params.id);
     await user.findByIdAndDelete(req.params.id);
-    res.redirect('users/allUsers');
+    res.redirect('/users/allUsers');
 };
 
 module.exports = userController;

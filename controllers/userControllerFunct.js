@@ -1,6 +1,6 @@
 'use strict'
 
-const Car = require('../models/user');
+const User = require('../models/user');
 
 function createUsers(param){
     return new user(param);
