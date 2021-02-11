@@ -40,7 +40,7 @@ userController.updateUser = async (req, res) => {
 };
 
 userController.deleteUser = async (req, res) => {
-    console.log(req.params.id);
+
     await user.findByIdAndDelete(req.params.id);
     res.redirect('users/allUsers');
 };
