@@ -1,19 +1,19 @@
 'use strict'
 
-const {Router} = require('express');
+const { Router } = require('express');
 const router = Router();
 const userController = require('../controllers/user.controller');
 
-router.get("/users/add", userController.formCreateUser);
+router.get("/rentalUsers/add", userController.formCreateUser);
 
-router.post("/users/createUser", userController.createNewUser);
+router.post("/rentalUsers/createUser", userController.createNewUser);
 
-router.get("/users/detail/:id", userController.showOneUser);
-router.get("/users/all", userController.showAllUsers);
+router.get("/rentalUsers/detail/:id", userController.showOneUser);
+router.get("/rentalUsers/all", userController.showAllUsers);
 
-router.get("/user/updateUser/:id", userController.formEditUser);
-router.post("/users/updateUser/:id", userController.updateUser);
+router.get("/rentalUser/updateUser/:id", userController.formEditUser);
+router.post("/rentalUsers/updateUser/:id", userController.updateUser);
 
-router.get("/users/deleteUser/:id", userController.deleteUser);
+router.get("/rentalUsers/deleteUser/:id", userController.deleteUser);
 
 module.exports = router;

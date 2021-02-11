@@ -16,7 +16,7 @@ userController.createNewUser = async(req, res) =>{
     
     console.log(req.body);
     await createUsers(req.body).save();
-    res.redirect('/users/all');
+    res.redirect('/rentalUsers/all');
 };
 
 userController.showOneUser = async (req, res) => {
@@ -36,13 +36,13 @@ userController.formEditUser = async (req,res) => {
 
 userController.updateUser = async (req, res) => {
     await user.findByIdAndUpdate(req.params.id, req.body);
-    res.redirect('/users/allUsers');
+    res.redirect('/rentalUsers/all');
 };
 
 userController.deleteUser = async (req, res) => {
 
     await user.findByIdAndDelete(req.params.id);
-    res.redirect('/users/allUsers');
+    res.redirect('/rentalUsers/all');
 };
 
 module.exports = userController;
