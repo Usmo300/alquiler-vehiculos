@@ -1,13 +1,13 @@
-// 'use strict'
+'use strict'
 
-// const { Router } = require ('express');
-// const router = Router();
-// const SearcherController = require('../controllers/searcherController');
-
-
-// router.get("/rentalCars/addSearcher", SearcherController.formSearcher);
-
-// router.post("/rentalCars/createSearcher", SearcherController.createSearcher);
+const { Router } = require ('express');
+const router = Router();
+const SearcherController = require('../controllers/searcherController');
 
 
-// module.exports = router;
+router.get("/rentalCars/addSearcher", SearcherController.formSearcher);
+
+router.post("/rentalCars/createSearcher", SearcherController.createSearcher);
+
+
+module.exports = router;

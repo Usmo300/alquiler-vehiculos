@@ -4,7 +4,7 @@ const { Router } = require ('express');
 const router = Router();
 const CarController = require('../controllers/carController');
 
-const SearcherController = require('../controllers/searcherController');
+// const SearcherController = require('../controllers/searcherController');
 
 
 
@@ -23,9 +23,9 @@ router.post("/rentalCars/updateCar/:id",CarController.updateCar);
 router.get("/rentalCars/deleteCar/:id",CarController.deleteCar);
 
 
-router.get("/rentalCars/addSearcher", SearcherController.formSearcher);
+// router.get("/rentalCars/addSearcher", SearcherController.formSearcher);
 
-router.post("/rentalCars/createSearcher", SearcherController.createSearcher);
+// router.post("/rentalCars/createSearcher", SearcherController.createSearcher);
 
 
 module.exports = router;

@@ -11,7 +11,7 @@ const searcherSchema = new Schema({
 
 });
 
-// module.exports = model('Searcher', searcherSchema);
+module.exports = model('Searcher', searcherSchema);
 
-const Searcher = model('Searcher', searcherSchema);
-module.exports = Searcher;
+// const Searcher = model('Searcher', searcherSchema);
+// module.exports = Searcher;

@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 app.use(require('./routes/Car.route'));
+app.use(require('./routes/searcherRoute'));
 
 app.set('view engine', 'hbs');
 
