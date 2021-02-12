@@ -7,7 +7,13 @@ const searcherSchema = new Schema({
 
     leaseReturnDate: Date,
     
-    leaseTimeEnd: String
+    leaseTimeEnd: String,
+
+    place: String,
+    
+    placeEnd: String,
+
+    carSize: String,
 
 });
 

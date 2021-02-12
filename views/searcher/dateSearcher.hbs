@@ -4,27 +4,45 @@
 
         <section id="">
             <label for="leaseDate">Fecha de recogida: </label>
-            <input type="date" id="leaseDate" name="leaseDate" placeholder="Fecha recogida"/>
+            <input type="date" id="leaseDate" name="leaseDate"/>
         </section>
 
         <section id="">
             <label for="leaseTime">Hora de recogida: </label>
-            <input type="time" id="leaseTime" name="leaseTime" placeholder="Hora recogida"/>
+            <input type="time" id="leaseTime" name="leaseTime"/>
         </section>
 
         <section id="">
             <label for="leaseReturnDate">Fecha de devolución: </label>
-            <input type="date" id="leaseReturnDate" name="leaseReturnDate" placeholder="Fecha devolución"/>
+            <input type="date" id="leaseReturnDate" name="leaseReturnDate"/>
         </section>
 
-        <section id="nextItvDate">
+        <section id="">
             <label for="leaseTimeEnd">Hora devolución: </label>
-            <input type="time" id="leaseTimeEnd" name="leaseTimeEnd" placeholder="Hora devolución"/>
+            <input type="time" id="leaseTimeEnd" name="leaseTimeEnd"/>
         </section>
 
-        
+
+        <section id="">
+            <label for="place">Lugar de recogida: </label>
+            <input type="text" id="place" name="place" placeholder="Lugar de recogida"/>
+        </section>
+
+        <section id="">
+            <label for="placeEnd">Lugar de devolución: </label>
+            <input type="text" id="placeEnd" name="placeEnd" placeholder="Lugar de devolución"/>
+        </section>        
       
+        <section id="">
+            <label for="leaseTimeEnd">Tamaño del coche: </label>
+            <input type="radio" id="pequeño" name="size" value="pequeño"checked>
+            <label for="pequeño">Pequeño</label>            
+            <input type="radio" id="mediano" name="size" value="mediano">
+            <label for="mediano">Mediano</label>            
+            <input type="radio" id="grande" name="size" value="grande">
+            <label for="grande">Grande</label>
+        </section>
+
         <button type="submit">Enviar</button>
         <button type="reset">Reset</button>
-
     </form>
