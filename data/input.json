@@ -9,6 +9,14 @@
 			"required": true
 		},
 		{
+			"type": "text",
+			"placeholder": "Modelo",
+			"modifier":"",
+			"id": "carModel",
+			"name": "carModel",
+			"required": true
+		},
+		{
 			"type": "number",
 			"placeholder": "Precio alquiler",
 			"modifier":"",
@@ -27,8 +35,8 @@
 			"type": "number",
 			"placeholder": "Nº de asientos",
 			"modifier":"",
-			"id": "seatsNumer",
-			"name": "searsNumber",
+			"id": "seatsNumber",
+			"name": "seatsNumber",
 			"required": true
 		},
 		{

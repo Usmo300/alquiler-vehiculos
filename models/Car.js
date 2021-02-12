@@ -7,27 +7,27 @@ const carSchema = new Schema({
     carModel: {type: String,
             required:true},
     
-    modelYear: {type: String,
-            required:true},
+//     modelYear: {type: String,
+//             required:true},
     
-    nextItvDate: String, 
+//     nextItvDate: String, 
     
-    sellingPrice: Number,
+//     sellingPrice: Number,
     
-    costPrice: Number,
+//     costPrice: Number,
     
     leasingPrice: Number,
     
-    leaseDate: String,
+//     leaseDate: String,
     
-    leaseReturnDate: String, 
+//     leaseReturnDate: String, 
     
     carImage: {
             type: String},
             // required:true},
         
-    carColor: {type: String,
-            required:true},
+//     carColor: String,
+            
     
     seatsNumber: {type: Number,
             required:true},
@@ -49,7 +49,7 @@ const carSchema = new Schema({
     motorType: {type: String,
             required:true},
     
-    stock: Number,
+//     stock: Number,
     
     availability: String
 
