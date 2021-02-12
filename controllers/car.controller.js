@@ -2,11 +2,12 @@
 
 const {createCar, getSingleCar, getAllCars, carUpdate, carDelete} = require('./carControllerFunct');
 const Car = require('../models/Car');
+const input = require('../data/input.json');
 
 const CarController = {};
 
 CarController.formCreateCar = (req,res) => {
-    res.render('cars/newCarForm');
+    res.render('cars/newCarForm', {atomList:input.newCarForm});
 }
 
 CarController.createNewCar = async (req, res) => {
