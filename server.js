@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
-app.use(require('./routes/Car.route'));
+app.use(require('./routes/Car.routes'));
 
 app.set('view engine', 'hbs');
 
