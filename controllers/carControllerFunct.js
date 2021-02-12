@@ -2,13 +2,24 @@
 
 const Car = require('../models/Car');
 
-function createCars(param){
-    return new Car(param);
+function createCar(param){
+    return new Car(param).save();
 }
 
-function showCars(){
-    
+function getSingleCar(id){
+   return Car.findById(id).lean();    
 }
 
+function getAllCars(){
+    return Car.find().lean();
+}
 
-module.exports = {createCars};
+function carUpdate(id,info){
+    return Car.findByIdAndUpdate(id, info);
+}
+
+function carDelete(id){
+    return Car.findByIdAndDelete(id);
+}
+
+module.exports = {createCar, getSingleCar, getAllCars, carUpdate, carDelete};
