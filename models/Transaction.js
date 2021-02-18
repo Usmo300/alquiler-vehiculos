@@ -26,7 +26,10 @@ const transactionSchema = new Schema({
     finalPrice: {
             type: Number,
         required: true
-    }
+    },
+
+    place: String
+    
 });
 
 module.exports = model('Transaction', transactionSchema, 'transactions');

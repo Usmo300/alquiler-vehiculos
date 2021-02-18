@@ -34,7 +34,9 @@ const carSchema = new Schema({
     motorType: {type: String,
             required:true},
     
-    availability: String
+    availability: String,
+
+    place: String
 
 });
 

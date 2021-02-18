@@ -40,4 +40,6 @@ router.get("/rentalCars/deleteCar/:id",CarController.deleteCar);
 // });
 router.post('/rentalcars/search', CarController.searchCar);
 
+router.post('/rentalcars/search', CarController.searchPlace);
+
 module.exports = router;
