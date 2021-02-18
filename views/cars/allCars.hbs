@@ -1,5 +1,12 @@
 <form action="/rentalcars/search" method="POST" >
-<input type="search" name= "searchCars">
+{{!-- <input type="search" name= "searchCars">
+<input type="submit" value="Buscar"> --}}
+<input type="radio" id="pequeño" name="searchCars" value="pequeño">
+<label for="pequeño">Pequeño</label>            
+<input type="radio" id="mediano" name="searchCars" value="mediano">
+<label for="mediano">Mediano</label>            
+<input type="radio" id="grande" name="searchCars" value="grande">
+<label for="grande">Grande</label>
 <input type="submit" value="Buscar">
 
 </form>
