@@ -1,0 +1,53 @@
+    <fieldset>
+        <legend>Detalles de la transacción</legend>
+
+        <img src="{{this.carImage}}" alt="Logo">
+
+        <section>
+            <label for="carBrand">Marca: </label>
+            <input type="text" readonly="readonly" value="{{this.carBrand}}">
+        </section>
+
+        <section>
+            <label for="carModel">Modelo del coche: </label>
+            <input type="text" readonly="readonly" value="{{this.carModel}}">
+        </section>
+
+        <section>
+            <label for="leasingPrice">Precio alquiler: </label>
+            <input type="text" readonly="readonly" value="{{this.leasingPrice}}">
+        </section>
+
+        <section>
+            <label for="leaseDate">Fecha de alquiler: </label>
+            <input type="date"  id="leaseDate" name="leaseDate" placeholder="Fecha de alquiler"/>
+        </section>
+ 
+        <section>
+            <label for="leaseTime">Hora de alquiler: </label>
+            <input type="time"  id="leaseTime" name="leaseTime" placeholder="Hora de alquiler"/>
+        </section>
+
+        <section>
+            <label for="leaseReturnDate">Fecha devolución: </label>
+            <input type="date"  id="leaseReturnDate" name="leaseReturnDate" placeholder="Fecha devolución"/>
+        </section>
+      
+        <section>
+            <label for="leaseTimeEnd">Hora devolución: </label>
+            <input type="time"  id="leaseTimeEnd" name="leaseTimeEnd" placeholder="Hora devolución"/>
+        </section>
+
+        <section>
+            <label for="carType">Tipo de coche: </label>
+            <input type="text" readonly="readonly" value="{{this.carType}}">
+        </section>
+
+        <section>
+            <label for="finalPrice">Precio Final: </label>
+            <input type="text" readonly="readonly" value="{{this.finalPrice}}">
+        </section>
+
+        <a href="/rentalCars/detail/{{this._id}}">Atrás</a>
+        <a href="">Alquilar</a>
+    </fieldset>
