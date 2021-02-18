@@ -18,18 +18,8 @@ const transactionSchema = new Schema({
          required: true
 },
 
-    leaseTime: {
-            type: String,
-        required: true
-},
-
     leaseReturnDate: {
             type: Date,
-        required: true
-},
-    
-    leaseTimeEnd: {
-            type: String,
         required: true
 },
 
