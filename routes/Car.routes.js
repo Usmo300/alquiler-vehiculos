@@ -38,8 +38,7 @@ router.get("/rentalCars/deleteCar/:id",CarController.deleteCar);
 //     }
 //     res.json(cars);
 // });
-router.post('/rentalcars/search', CarController.searchCar);
 
-router.post('/rentalcars/search', CarController.searchPlace);
+router.post('/rentalcars/search', CarController.searchCar);
 
 module.exports = router;

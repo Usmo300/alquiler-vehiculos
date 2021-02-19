@@ -26,8 +26,4 @@ function carSearch(text){
     return Car.find(text).lean();
 }
 
-function carPlace(text){
-    return Car.find(text).lean();
-}
-
-module.exports = {createCar, getSingleCar, getAllCars, carUpdate, carDelete, carSearch, carPlace};
+module.exports = {createCar, getSingleCar, getAllCars, carUpdate, carDelete, carSearch};

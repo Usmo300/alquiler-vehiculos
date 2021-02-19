@@ -40,6 +40,6 @@ const carSchema = new Schema({
 
 });
 
-carSchema.index({carType:"text"});
+carSchema.index({"carType":"text", "place":"text"});
 
 module.exports = model('Car', carSchema, 'cars');
