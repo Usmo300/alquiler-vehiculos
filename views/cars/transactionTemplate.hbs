@@ -3,20 +3,11 @@
 
         <img src="{{this.carImage}}" alt="Logo">
 
-        <section>
-            <label for="carBrand">Marca: </label>
-            <input type="text" readonly="readonly" value="{{this.carBrand}}">
-        </section>
+        <p>Marca: {{this.carBrand}}</p>
 
-        <section>
-            <label for="carModel">Modelo del coche: </label>
-            <input type="text" readonly="readonly" value="{{this.carModel}}">
-        </section>
+        <p>Modelo del coche: {{this.carModel}}</p>
 
-        <section>
-            <label for="leasingPrice">Precio alquiler: </label>
-            <input type="text" readonly="readonly" value="{{this.leasingPrice}}">
-        </section>
+        <p>Precio alquiler: {{this.leasingPrice}}</p>
 
         <section>
             <label for="leaseDate">Fecha de alquiler: </label>
@@ -28,20 +19,14 @@
             <input type="date"  id="leaseReturnDate" name="leaseReturnDate" placeholder="Fecha devolución"/>
         </section>
 
-        <section>
-            <label for="carType">Tipo de coche: </label>
-            <input type="text" readonly="readonly" value="{{this.carType}}">
-        </section>
+        <p>Tipo de coche: {{this.carType}}</p>
 
         <section>
             <label for="finalPrice">Precio Final: </label>
             <input type="text" readonly="readonly" value="{{this.finalPrice}}">
         </section>
-
-         <section>
-            <label for="place">Lugar: </label>
-            <input type="text" readonly="readonly" value="{{this.place}}">
-        </section>
+        
+        <p>Lugar: {{this.place}}</p>
 
         <a href="/rentalCars/detail/{{this._id}}">Atrás</a>
         <a href="">Alquilar</a>

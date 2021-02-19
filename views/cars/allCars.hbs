@@ -17,7 +17,7 @@
 
 <section>
     
-        {{#each cars}}
+        {{!-- {{#each cars}}
             <ul>
                 <a href="/rentalCars/detail/{{_id}}">
                     <li><img src="{{carImage}}" alt="Car image"></li>
@@ -27,6 +27,8 @@
                     <li>Lugar: {{place}}</li>
                 </a>
             </ul>
-        {{/each}}
+        {{/each}} --}}
   
+    {{>organisms/eachCars/eachCar}}
+
 </section>
