@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
 const app = express();
 
+require('./helpers/helpersHandlebars');
 
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:false}));

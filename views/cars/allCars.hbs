@@ -6,6 +6,7 @@
 <section>
     
         {{!-- {{#each cars}}
+            {{#ifEquals availability 'yes'}}
             <ul>
                 <a href="/rentalCars/detail/{{_id}}">
                     <li><img src="{{carImage}}" alt="Car image"></li>
@@ -15,6 +16,7 @@
                     <li>Lugar: {{place}}</li>
                 </a>
             </ul>
+            {{/ifEquals}}
         {{/each}} --}}
   
     {{>organisms/eachCars/eachCar}}

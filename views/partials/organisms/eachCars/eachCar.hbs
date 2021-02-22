@@ -1,3 +1,5 @@
 {{#each cars}}
-    {{>molecules/eachCars/eachCar}}
+    {{#ifEquals availability 'yes'}}
+        {{>molecules/eachCars/eachCar}}
+    {{/ifEquals}}
 {{/each}}
