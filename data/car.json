@@ -44,7 +44,7 @@
         "airConditioner": "Si",
         "transmissionType": "Automático",
         "motorType": "Gasolina",
-        "availability": "si",
+        "availability": "yes",
         "place": "Asturias"
     },
     {
@@ -60,7 +60,7 @@
         "airConditioner":"Si",
         "transmissionType":"Manual",
         "motorType": "Gasolina",
-        "availability": "si",
+        "availability": "yes",
         "place": "Galicia"
     }
 ]
