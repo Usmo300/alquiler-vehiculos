@@ -1,3 +1,4 @@
+
     <fieldset>
         <legend>Detalles de la transacción</legend>
 
@@ -7,17 +8,24 @@
 
         <p>Modelo del coche: {{this.carModel}}</p>
 
-        <p>Precio alquiler: {{this.leasingPrice}}</p>
-
+        <p>Precio alquiler: <span id="leasingPrice">{{this.leasingPrice}}</span></p>
+ 
         <section>
             <label for="leaseDate">Fecha de alquiler: </label>
-            <input type="date"  id="leaseDate" name="leaseDate" placeholder="Fecha de alquiler"/>
+            <input type="date"  id="leaseDate" name="leaseDate"/>
+            
         </section>
  
         <section>
             <label for="leaseReturnDate">Fecha devolución: </label>
             <input type="date"  id="leaseReturnDate" name="leaseReturnDate" placeholder="Fecha devolución"/>
+          
         </section>
+        <div>
+            
+            <button id="confirmDates" >Confirmar fechas</button>
+        </div>
+      
 
         <p>Tipo de coche: {{this.carType}}</p>
 
