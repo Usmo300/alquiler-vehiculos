@@ -7,10 +7,16 @@ function caculateDays(){
     console.log(beginDate);
 	let endDate = new Date(document.querySelector('#leaseReturnDate').value);
     console.log(endDate);
-	let rentalDays= endDate.getTime() - beginDate.getTime();
-	numberOfDays = Math.round(rentalDays/(1000*60*60*24));
-	console.log( numberOfDays);
-	// alert(`El total de días de alquiler es ${numberOfDays}`);
+	let today = new Date();
+	console.log(today);
+	
+	if (today < beginDate && endDate > beginDate){
+		let rentalDays= endDate.getTime() - beginDate.getTime();
+		numberOfDays = Math.round(rentalDays/(1000*60*60*24));
+		console.log( numberOfDays);}
+	else{
+		alert('fechas incorrectas');
+	}
 	
 };
 
@@ -18,7 +24,7 @@ const button = document.querySelector('#confirmDates');
 button.addEventListener('click', caculateDays);
 
 let pricePerDay= parseInt(document.querySelector('#leasingPrice').textContent);
-console.log(typeof pricePerDay);
+console.log(pricePerDay);
 
 function calculatePrice(a, b){
     const finalPrice = a * b;
@@ -27,5 +33,5 @@ function calculatePrice(a, b){
 }
 
 button.addEventListener('click', function(){
-	document.querySelector('#finalPrice').value = 	calculatePrice(numberOfDays, pricePerDay);
+	document.querySelector('#finalPrice').value = calculatePrice(numberOfDays, pricePerDay);
 });
