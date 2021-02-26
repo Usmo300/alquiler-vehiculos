@@ -12,7 +12,7 @@ app.use(methodOverride('_method'));
 
 app.use(require('./routes/user.route'));
 app.use(require('./routes/Car.routes'));
-app.use(require('./routes/transaction.routes'));
+app.use(require('./routes/Rent.routes'));
 
 app.set('view engine', 'hbs');
 

@@ -20,25 +20,9 @@ router.post("/rentalCars/updateCar/:id",CarController.updateCar);
 
 router.get("/rentalCars/deleteCar/:id",CarController.deleteCar);
 
-// router.get('/search', async (req,res) =>{
-//     let cars;
-//     if(req.query.q){
-//                 cars = await Car.find(
-//                     {$text: {
-//                         $search: req.query.q
-//                     }},
-//                     {
-//                         score: {$meta: 'textScore'}
-
-//                     }
-
-//                 ).sort({
-//                     score: {$meta: 'textScore'}
-//                 });
-//     }
-//     res.json(cars);
-// });
-
 router.post('/rentalcars/search', CarController.searchCar);
+
+router.get("/rentalCars/leasingForm/:id", CarController.renderDateForm);
+
 
 module.exports = router;
