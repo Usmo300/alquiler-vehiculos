@@ -44,5 +44,8 @@ CarController.searchCar = async(req,res) =>{
     res.render('cars/allCars', {cars:searchResult});
 }
 
+CarController.renderDateForm = async (req, res) => {
+    res.render('cars/DateForm', await getSingleCar(req.params.id))
+};
 
 module.exports = CarController;

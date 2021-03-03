@@ -1,0 +1,20 @@
+<figure>
+    <img src="{{this.carImage}}" alt="imagen coche">
+    <figcaption> {{this.carBrand}} {{this.carModel}} </figcaption>
+</figure>
+<section>
+    <p>Precio diario: {{this.leasingPrice}} &euro;</p>
+</section>
+
+
+<form action="/rentalCars/leaseCar/{{this._id}}" method="POST">
+
+    <label for="leaseDate">Fecha inicial: </label>
+    <input type="date" name="leaseDate" id="leaseDate">
+
+    <label for="Ndays">Periodo de alquiler (días): </label>
+    <input type="number" name="Ndays" id="Ndays">
+
+    <input type="submit" value="Enviar">
+
+</form>
