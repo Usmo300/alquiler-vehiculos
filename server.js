@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
 const app = express();
 
+require('./helpers/helpersHandlebars');
 
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:false}));
@@ -11,6 +12,7 @@ app.use(methodOverride('_method'));
 
 app.use(require('./routes/user.route'));
 app.use(require('./routes/Car.routes'));
+app.use(require('./routes/transaction.routes'));
 
 app.set('view engine', 'hbs');
 

@@ -24,6 +24,7 @@ const carSchema = new Schema({
     co2Emissions: String,
     
     carType: String,
+     
     
     airConditioner: String,
     
@@ -33,8 +34,12 @@ const carSchema = new Schema({
     motorType: {type: String,
             required:true},
     
-    availability: String
+    availability: String,
+
+    place: String
 
 });
+
+carSchema.index({"carType":"text", "place":"text"});
 
 module.exports = model('Car', carSchema, 'cars');
