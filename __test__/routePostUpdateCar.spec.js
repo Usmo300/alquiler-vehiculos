@@ -29,8 +29,7 @@ describe('PUT/rentalCars/add', () => {
         });
         
         const response = await request(app).post(`/rentalCars/updateCar/${_id}`);
-
-        const savedCar = await Car.findByIdAndUpdate(_id, info);
+        await Car.findByIdAndUpdate(_id, info);
        
         expect(response.error).toBe(false);
         expect(response.status).toBe(302);
