@@ -7,13 +7,13 @@
 </section>
 
 
-<form action="/rentalCars/leaseCar/{{this._id}}" method="POST">
+<form action="/rentalCars/rentDetail/{{this._id}}" method="POST">
 
     <label for="leaseDate">Fecha inicial: </label>
     <input type="date" name="leaseDate" id="leaseDate">
 
-    <label for="Ndays">Periodo de alquiler (días): </label>
-    <input type="number" name="Ndays" id="Ndays">
+    <label for="leaseReturnDate">Periodo de alquiler (días): </label>
+    <input type="Date" name="leaseReturnDate" id="leaseReturnDate">
 
     <input type="submit" value="Enviar">
 
