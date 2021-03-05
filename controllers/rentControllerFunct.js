@@ -11,8 +11,8 @@ function rentUpdate(rentsList) {
     }
   });
 }
-function getSingleRent(id){
-  return Rent.findById(id).lean();    
-}
+// function getSingleRent(id){
+//   return Rent.findById(id).lean();    
+// }
 
-module.exports = { rentUpdate, getSingleRent };
+module.exports = { rentUpdate };

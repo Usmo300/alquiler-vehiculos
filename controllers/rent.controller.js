@@ -1,7 +1,7 @@
 'use strict';
 
 const {getSingleCar, carUpdate} = require('./carControllerFunct');
-const {rentUpdate, getSingleRent} = require('./rentControllerFunct');
+const {rentUpdate} = require('./rentControllerFunct');
 const Rent = require('../models/Rent');
 
 const RentController = {};
@@ -19,12 +19,14 @@ RentController.leaseCar = async (req, res) => {
         leaseDate: req.body.leaseDate,
         leaseReturnDate: req.body.leaseReturnDate,
         carId: singleCar._id});
-    if (singleCar.availability === "yes") {
-        await newRent.save();
-        await carUpdate(req.params.id, {availability: "no"});
-    }
-    // res.render("rent/rentDetailTemplate", await getSingleRent(req.params.id));
-    // res.redirect('/rentalcars/all');
+        console.log(newRent);
+        // if (singleCar.availability === "yes") {
+       const car = await newRent.save();
+       console.log(car);
+        // await carUpdate(req.params.id, {availability: "no"});
+ 
+    res.render("rent/rentDetailTemplate", {car});
+    // res.redirect('/rentalcars/transactions');
 };
 
 RentController.showAllRents = async (req,res) => {
@@ -33,10 +35,10 @@ RentController.showAllRents = async (req,res) => {
     res.render("rent/allRents", {rents: rentsList} );
 };
 
-RentController.showOneRent = async (req, res) => {
-   
-    res.render('rent/rentDetailTemplate', await getSingleRent(req.params.id));
-};
+// RentController.showOneRent = async (req, res) => {
+//     const rentDetail = await getSingleRent(req.params.id);
+//     res.render('rent/rentDetailTemplate', {rentDetail});
+// };
 
 
 
