@@ -1,10 +1,14 @@
 'use strict';
 
-const port = 4000;
 const app = require('./server');
+
 require('./conexion');
 
+app.listen(app.get('port'), () => {
+    console.log('Server on port', app.get('port'))
+});
 
 
-app.listen(port, console.log(`Escuchando el puerto: ${port}`));
+
+
 

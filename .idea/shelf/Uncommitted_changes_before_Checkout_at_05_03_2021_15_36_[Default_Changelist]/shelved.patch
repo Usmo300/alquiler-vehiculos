@@ -1,0 +1,18 @@
+Index: controllers/rent.controller.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>'use strict';\r\n\r\nconst {getSingleCar, carUpdate} = require('./carControllerFunct');\r\nconst {rentUpdate} = require('./rentControllerFunct');\r\nconst Rent = require('../models/Rent');\r\n\r\nconst RentController = {};\r\n\r\nRentController.leaseCar = async (req, res) => {\r\n    const singleCar = await getSingleCar(req.params.id);\r\n    const Ndays = (new Date((req.body.leaseReturnDate)).getTime() - new Date((req.body.leaseDate)).getTime())/(24*60*60*1000);\r\n    console.log(Ndays);\r\n    const finalPrice = (singleCar.leasingPrice*Ndays);\r\n    console.log(finalPrice);\r\n    // const leaseReturnDate = (new Date((req.body.leaseDate)).getTime() + ((req.body.Ndays - 1)*24*60*60*1000));\r\n    const newRent = new Rent ({carBrand: singleCar.carBrand,\r\n        carModel: singleCar.carModel,\r\n        leasingPrice: finalPrice,\r\n        leaseDate: req.body.leaseDate,\r\n        leaseReturnDate: req.body.leaseReturnDate,\r\n        carId: singleCar._id});\r\n        console.log(newRent);\r\n        // if (singleCar.availability === \"yes\") {\r\n       const car = await newRent.save();\r\n       console.log(car);\r\n        // await carUpdate(req.params.id, {availability: \"no\"});\r\n \r\n    res.render(\"rent/rentDetailTemplate\", {car});\r\n    // res.redirect('/rentalcars/transactions');\r\n};\r\n\r\nRentController.showAllRents = async (req,res) => {\r\n    const rentsList = await Rent.find().lean();\r\n    rentUpdate(rentsList);\r\n    res.render(\"rent/allRents\", {rents: rentsList} );\r\n};\r\n\r\n// RentController.showOneRent = async (req, res) => {\r\n//     const rentDetail = await getSingleRent(req.params.id);\r\n//     res.render('rent/rentDetailTemplate', {rentDetail});\r\n// };\r\n\r\n\r\n\r\nmodule.exports = RentController;
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/controllers/rent.controller.js b/controllers/rent.controller.js
+--- a/controllers/rent.controller.js	
++++ b/controllers/rent.controller.js	
+@@ -40,6 +40,4 @@
+ //     res.render('rent/rentDetailTemplate', {rentDetail});
+ // };
+ 
+-
+-
+ module.exports = RentController;
+\ No newline at end of file

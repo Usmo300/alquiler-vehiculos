@@ -1,8 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
 const morgan = require('morgan');
+
 const app = express();
+app.set('port', process.env.PORT || 4000);
 
 require('./helpers/helpersHandlebars');
 
