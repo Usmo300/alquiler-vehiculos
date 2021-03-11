@@ -1,0 +1,25 @@
+Index: views/rent/rentDetailTemplate.hbs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><section>\r\n\r\n        {{#each car}}\r\n     \r\n            <p>Marca:{{this.carBrand}}</p>\r\n            <p>Modelo: {{this.carModel}}</p>\r\n            <p>Fecha de recogida: {{this.leaseDate}}</p>\r\n            <p>Fecha de devolución: {{this.leaseReturnDate}}</p>\r\n            <p>Importe: {{this.leasingPrice}} &euro;</p>\r\n      \r\n    {{/each}}\r\n \r\n\r\n</section>
+===================================================================
+diff --git a/views/rent/rentDetailTemplate.hbs b/views/rent/rentDetailTemplate.hbs
+--- a/views/rent/rentDetailTemplate.hbs	
++++ b/views/rent/rentDetailTemplate.hbs	
+@@ -2,11 +2,11 @@
+ 
+         {{#each car}}
+      
+-            <p>Marca:{{this.carBrand}}</p>
+-            <p>Modelo: {{this.carModel}}</p>
+-            <p>Fecha de recogida: {{this.leaseDate}}</p>
+-            <p>Fecha de devolución: {{this.leaseReturnDate}}</p>
+-            <p>Importe: {{this.leasingPrice}} &euro;</p>
++            <p>Marca:{{carBrand}}</p>
++            <p>Modelo: {{carModel}}</p>
++            <p>Fecha de recogida: {{leaseDate}}</p>
++            <p>Fecha de devolución: {{leaseReturnDate}}</p>
++            <p>Importe: {{leasingPrice}} &euro;</p>
+       
+     {{/each}}
+  
