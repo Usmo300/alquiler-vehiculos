@@ -8,19 +8,23 @@ const RentController = {};
 
 RentController.leaseCar = async (req, res) => {
     const singleCar = await getSingleCar(req.params.id);
-    const finalPrice = (singleCar.leasingPrice*req.body.Ndays);
-    const leaseReturnDate = (new Date((req.body.leaseDate)).getTime() + ((req.body.Ndays - 1)*24*60*60*1000));
-    const newRent = new Rent ({carBrand: singleCar.carBrand,
+    const Ndays = (new Date((req.body.leaseReturnDate)).getTime() - new Date((req.body.leaseDate)).getTime())/(24*60*60*1000);
+    console.log(Ndays);
+    const finalPrice = (singleCar.leasingPrice*Ndays);
+    const newRent = new Rent ({
+        carBrand: singleCar.carBrand,
         carModel: singleCar.carModel,
         leasingPrice: finalPrice,
         leaseDate: req.body.leaseDate,
-        leaseReturnDate: leaseReturnDate,
-        carId: singleCar._id});
-    if (singleCar.availability === "yes") {
-        await newRent.save();
-        await carUpdate(req.params.id, {availability: "no"});
-    }
-    res.redirect("/rentalcars/all");
+        leaseReturnDate: req.body.leaseReturnDate,
+        carId: singleCar._id
+    });
+
+    const car = await newRent.save();
+    const convertArray = [];
+    convertArray.push(car)
+
+    res.render("rent/rentDetailTemplate", { convertArray });
 };
 
 RentController.showAllRents = async (req,res) => {
@@ -28,7 +32,5 @@ RentController.showAllRents = async (req,res) => {
     rentUpdate(rentsList);
     res.render("rent/allRents", {rents: rentsList} );
 };
-
-
 
 module.exports = RentController;
