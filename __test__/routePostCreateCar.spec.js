@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const Car = require('../models/Car');
 
-const mongoDB = 'mongodb://localhost:27017/Alquiler_vehiculos';
+const MONGO_URI_TEST = 'mongodb://localhost:27017/Alquiler_vehiculos_test';
 
 beforeAll(() => {
-    mongoose.connect(mongoDB, {
+    mongoose.connect(MONGO_URI_TEST, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false, 

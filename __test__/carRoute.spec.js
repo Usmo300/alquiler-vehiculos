@@ -2,10 +2,10 @@ const request = require('supertest');
 const app = require('../server');
 const mongoose = require('mongoose');
 
-const mongoDB = 'mongodb://localhost:27017/Alquiler_vehiculos';
+const MONGO_URI_TEST = 'mongodb://localhost:27017/Alquiler_vehiculos_test';
 
 beforeAll(() => {
-    mongoose.connect(mongoDB, {
+    mongoose.connect(MONGO_URI_TEST, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false, 
@@ -18,7 +18,7 @@ describe('GET/rentalCars/add', () => {
      
         const response = await request(app).get('/rentalCars/add');
         
-        expect(response.error).toBe(false);
+        expect(response.error).toBeFalsy();
         expect(response.status).toBe(200);
     });
 
