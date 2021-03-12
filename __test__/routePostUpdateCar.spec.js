@@ -1,9 +1,10 @@
+require('dotenv').config();
 const request = require('supertest');
 const app = require('../server');
 const mongoose = require('mongoose');
 const Car = require('../models/Car');
 
-const MONGO_URI_TEST = 'mongodb://localhost:27017/Alquiler_vehiculos_test';
+const { MONGO_URI_TEST } = process.env;
 
 beforeAll(() => {
     mongoose.connect(MONGO_URI_TEST, {
